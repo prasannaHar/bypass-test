@@ -1,0 +1,17 @@
+report,filters,1,2,3,4,5,6,7,8,9,10
+job_count,filters,cicd_user_ids,job_statuses,parameters,job_names,triage_rule,job_normalized_full_names,instance_names,projects,job_statuses
+job_count,x-axis,project_name,triage_rule,job_normalized_full_name,cicd_user_id,job_name,instance_name,job_status,job_name,cicd_user_id
+job_count,stacks,triage_rule,project_name,job_status,job_normalized_full_name,cicd_user_id,project_name,job_name,instance_name,trend
+job_count,exclude,,yes,,yes,,yes,,yes
+dora_df,calculation_field,start_time,end_time,end_time,end_time,end_time,start_time,end_time,start_time,start_time,end_time
+dora_df,pipeline_filter_eq,step_name,stage_name,instance_names,job_statuses,instance_names,job_statuses,,instance_names,,step_name
+dora_df,pipeline_filter_contains,,,,,,,,,,
+dora_df,pipeline_filter_not_eq,step_status,stage_status,job_statuses,cicd_user_ids,cicd_user_ids,,cicd_user_ids,,stage_name,
+dora_df,pipeline_filter_starts_with,,,,,,,,,,
+dora_df,is_ci_job,,,,,,,,,,
+dora_df,is_cd_job,,,,,,,,,,
+dora_df,pipelines,specific,all,all,specific,all,specific,all,all,all,all
+dora_cfr,calculation_field,start_time,end_time,end_time,start_time,end_time,start_time,start_time,end_time
+dora_cfr,pipeline_filter_eq,step_name,stage_name,instance_names,,,instance_names,,step_name
+dora_cfr,pipeline_filter_not_eq,step_status,stage_status,cicd_user_ids,,cicd_user_ids,,stage_name,
+dora_cfr,pipelines,specific,all,all,all,all,specific,all,all

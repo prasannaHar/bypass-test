@@ -1,0 +1,33 @@
+report,filter,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,W,X
+scm_prs_report,across,pr_closed,pr_closed,comment_density,project,repo_id,pr_created,reviewer_count,approver_count,target_branch,label,state,code_change,approver,reviewer,source_branch,creator,code_change,assignee,pr_closed,approval_status,,
+scm_prs_report,interval,week,week,none,none,none,quarter,none,none,none,none,none,none,none,none,none,none,none,none,month,none,,
+scm_prs_report,time range filter,pr_merged_at,pr_merged_at,pr_created_at,pr_closed_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,,
+scm_prs_report,filters,projects,projects,none,repo_ids,source_branches,comment_densities,labels,has_issue_keys,reviewers,code_change_sizes,target_branches,states,creators,assignees,projects,projects,projects,projects,projects,projects,,
+scm_prs_report,filter 2,none,none,none,num_reviewers,none,none,none,none,none,none,num_approvers,none,none,none,none,none,none,none,none,none,,
+scm_prs_report,filter 3,none,none,projects,projects,projects,projects,projects,projects,projects,projects,projects,projects,projects,projects,none,none,none,none,none,none,,
+scm_prs_report,code_change_size_unit,lines,lines,files,files,files,files,files,files,files,files,files,files,files,files,files,files,lines,files,files,files,,
+scm_prs_report,sort_xaxis,value_high-low,value_high-low,value_low-high,label_high-low,label_low-high,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,value_high-low,,
+scm_review_collaboration_report,filters,target_branches,target_branches,repo_ids,projects,repo_ids,projects,projects,repo_ids,target_branches,projects,repo_ids,target_branches,,,,,,,,,,
+scm_review_collaboration_report,filter 2,projects,projects,projects,none,projects,none,none,projects,projects,none,projects,projects,,,,,,,,,,
+scm_review_collaboration_report,time range filter,pr_created_at,pr_merged_at,pr_created_at,pr_created_at,pr_merged_at,pr_closed_at,pr_merged_at,pr_closed_at,pr_closed_at,pr_merged_at,pr_created_at,pr_created_at,,,,,,,,,,
+scm_review_collaboration_report,pr_merged,TRUE,FALSE,FALSE,none,FALSE,FALSE,none,none,TRUE,TRUE,TRUE,none,,,,,,,,,,
+scm_commits_report,across,code_change,author,code_change,trend,technology,committer,file_type,trend,project,trend,repo_id,trend,,,,,,,,,,
+scm_commits_report,interval,none,none,none,day_of_week,none,none,none,week,none,quarter,none,month,,,,,,,,,,
+scm_commits_report,time range filter,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,,,,,,,,,,
+scm_commits_report,filters,repo_ids,projects,file_types,code_change_sizes,none,committers,authors,projects,projects,projects,projects,projects,,,,,,,,,,
+scm_commits_report,filter 2,projects,none,projects,projects,projects,projects,projects,none,none,none,none,none,,,,,,,,,,
+scm_commits_report,code_change_size_unit,lines,files,files,files,files,files,files,files,files,files,files,files,,,,,,,,,,
+scm_prs_lead_time_by_stage,time range filter,pr_closed_at,committed_at,pr_merged_at,pr_created_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,pr_merged_at,,,,,,,,,,,,,
+scm_prs_lead_time_by_stage,filters,source_branches,target_branches,states,repo_ids,none,labels,reviewers,creators,assignees,,,,,,,,,,,,,
+scm_prs_lead_time_by_stage,filter 2,repo_ids,repo_ids,repo_ids,none,repo_ids,repo_ids,repo_ids,repo_ids,repo_ids,,,,,,,,,,,,,
+scm_coding_days_report,across,repo_id,author,committer,author,committer,repo_id,repo_id,author,author,author,committer,repo_id,author,committer,committer,repo_id,author,committer,committer,repo_id,committer,committer
+scm_coding_days_report,metrics,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day,avg_coding_day
+scm_coding_days_report,interval,week,month,month,week,biweekly,biweekly,week,month,biweekly,month,week,month,week,biweekly,biweekly,month,month,biweekly,week,week,week,biweekly
+scm_coding_days_report,time range filter,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at,committed_at
+scm_coding_days_report,filters,projects,committers,projects,projects,file_types,repo_ids,authors,none,file_types,authors,authors,none,file_types,projects,none,file_types,repo_ids,authors,repo_ids,committers,none,committers
+scm_coding_days_report,filter 2,none,projects,none,none,projects,projects,projects,projects,projects,projects,projects,projects,projects,none,projects,projects,projects,projects,projects,projects,projects,projects
+scm_prs_single_stat,across,pr_reviewed,pr_updated,pr_created,pr_merged,pr_created,pr_created,pr_created,pr_created,pr_created,pr_created,pr_created,pr_created,pr_created,,,,,,,,,
+scm_prs_single_stat,time range filter,pr_created_at,pr_closed_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,pr_created_at,,,,,,,,,
+scm_prs_single_stat,filters,source_branches,states,comment_densities,repo_ids,has_issue_keys,projects,labels,code_change_sizes,none,target_branches,reviewers,creators,assignees,,,,,,,,,
+scm_prs_single_stat,filter 2,none,none,none,num_reviewers,none,none,none,none,none,num_approvers,none,none,none,,,,,,,,,
+scm_prs_single_stat,filter 3,projects,projects,projects,projects,projects,none,projects,projects,projects,projects,projects,projects,projects,,,,,,,,,

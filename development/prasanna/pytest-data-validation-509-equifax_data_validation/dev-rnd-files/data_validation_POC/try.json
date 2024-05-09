@@ -1,0 +1,794 @@
+{
+    "records": [
+      {
+        "id": "levelops/api-levelops",
+        "name": "api-levelops",
+        "owner": {
+          "type": "organization",
+          "login": "levelops"
+        },
+        "owner_name": "levelops",
+        "owner_type": "organization",
+        "html_url": "https://github.com/levelops/api-levelops",
+        "master_branch": "dev",
+        "created_at": "2019-08-08T20:47:51.000+00:00",
+        "pushed_at": "2022-03-02T07:39:37.000+00:00",
+        "updated_at": "2022-01-10T15:50:50.000+00:00",
+        "size": 6335,
+        "is_private": true,
+        "languages": {
+          "Java": 1
+        },
+        "pull_requests": [
+          {
+            "id": "863799017",
+            "number": 1372,
+            "state": "closed",
+            "locked": false,
+            "title": "LEV-4654 updated job dto",
+            "user": {
+              "type": "user",
+              "login": "maxime-levelops"
+            },
+            "created_at": "2022-02-25T20:54:17.000+00:00",
+            "updated_at": "2022-02-25T20:54:24.000+00:00",
+            "closed_at": "2022-02-25T20:54:22.000+00:00",
+            "merged_at": "2022-02-25T20:54:22.000+00:00",
+            "merge_commit_sha": "913f9be3dea058f5bca44bdf4eddfbe46cd29650",
+            "assignees": [],
+            "requested_reviewers": [],
+            "requested_teams": [],
+            "labels": [],
+            "head": {
+              "label": "levelops:maxime-dev",
+              "ref": "maxime-dev",
+              "sha": "98c49daee49064a47f2bc7d32a05b279fc0a0b4b",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "base": {
+              "label": "levelops:dev",
+              "ref": "dev",
+              "sha": "12f9a3d41d1ac8f5e77aa67ec3354d03fd45e9b1",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "author_association": "CONTRIBUTOR",
+            "reviews": [],
+            "pr_commits": [
+              {
+                "sha": "98c49daee49064a47f2bc7d32a05b279fc0a0b4b",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/98c49daee49064a47f2bc7d32a05b279fc0a0b4b",
+                "author": {
+                  "type": "user",
+                  "login": "maxime-levelops"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "maxime-levelops"
+                },
+                "message": "LEV-4654 updated job dto",
+                "git_author": {
+                  "email": "maxime@levelops.io",
+                  "name": "Maxime Bellier",
+                  "date": "2022-02-25T20:53:58.000+00:00"
+                },
+                "git_committer": {
+                  "email": "maxime@levelops.io",
+                  "name": "Maxime Bellier",
+                  "date": "2022-02-25T20:53:58.000+00:00"
+                }
+              }
+            ],
+            "patches": [
+              "@@ -60,7 +60,7 @@ wrapper {\n     distributionType = Wrapper.DistributionType.ALL\n }\n \n-ext.levelopsCommonsVersion =\"v0.1.5138\"\n+ext.levelopsCommonsVersion =\"v0.1.5140\"\n \n \n ext.levelopsCommonsLib = { name -> [group: 'io.levelops.commons', name: name, version: levelopsCommonsVersion] }",
+              "@@ -43,8 +43,8 @@\n     Long updatedAt;\n     @JsonProperty(\"elapsed\")\n     Long elapsed;\n-    @JsonProperty(\"result\")\n-    Object result;\n+    @JsonProperty(\"error\")\n+    Map<String, Object> error; // critical error\n     @JsonProperty(\"failures\")\n     List<IngestionFailure> ingestionFailures;\n \n@@ -64,7 +64,7 @@ public static IngestionLogDTO fromJobDTO(ObjectMapper objectMapper, JobDTO jobDT\n                 .from(from)\n                 .to(to)\n                 .elapsed(getElapsedTimeSeconds(jobDTO))\n-                .result(jobDTO.getResult())\n+                .error(jobDTO.getError())\n                 .ingestionFailures(jobDTO.getIngestionFailures())\n                 .build();\n     }"
+            ]
+          },
+          {
+            "id": "863456158",
+            "number": 1371,
+            "state": "closed",
+            "locked": false,
+            "title": "LEV-4838 ",
+            "user": {
+              "type": "user",
+              "login": "ctlo2020"
+            },
+            "created_at": "2022-02-25T13:42:12.000+00:00",
+            "updated_at": "2022-02-25T15:32:26.000+00:00",
+            "closed_at": "2022-02-25T15:32:26.000+00:00",
+            "merged_at": "2022-02-25T15:32:26.000+00:00",
+            "merge_commit_sha": "12f9a3d41d1ac8f5e77aa67ec3354d03fd45e9b1",
+            "assignee": {
+              "type": "user",
+              "login": "ctlo2020"
+            },
+            "assignees": [
+              {
+                "type": "user",
+                "login": "ctlo2020"
+              }
+            ],
+            "requested_reviewers": [
+              {
+                "type": "user",
+                "login": "viraj-levelops"
+              }
+            ],
+            "requested_teams": [],
+            "labels": [],
+            "head": {
+              "label": "levelops:LEV-4838",
+              "ref": "LEV-4838",
+              "sha": "777f7e2f6334c8bf5cbf5cd2affe93c825d52a3e",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "base": {
+              "label": "levelops:dev",
+              "ref": "dev",
+              "sha": "394220e3574131709e475a0b786c7d16abb6dd44",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "author_association": "COLLABORATOR",
+            "reviews": [],
+            "pr_commits": [
+              {
+                "sha": "065923b9013d5a64f00c8d4efed41a41c173baf2",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/065923b9013d5a64f00c8d4efed41a41c173baf2",
+                "author": {
+                  "type": "user",
+                  "login": "ctlo2020"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "ctlo2020"
+                },
+                "message": "Apply OU filter based on flag for velocity report",
+                "git_author": {
+                  "email": "srinath.chandrashekhar@levelops.io",
+                  "name": "ctlo2020",
+                  "date": "2022-02-25T13:33:20.000+00:00"
+                },
+                "git_committer": {
+                  "email": "srinath.chandrashekhar@levelops.io",
+                  "name": "ctlo2020",
+                  "date": "2022-02-25T13:33:20.000+00:00"
+                }
+              },
+              {
+                "sha": "c52ecae5aebefc7679f84811c716fc8aa687bec2",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/c52ecae5aebefc7679f84811c716fc8aa687bec2",
+                "author": {
+                  "type": "user",
+                  "login": "ctlo2020"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "ctlo2020"
+                },
+                "message": "code refactor",
+                "git_author": {
+                  "email": "srinath.chandrashekhar@levelops.io",
+                  "name": "ctlo2020",
+                  "date": "2022-02-25T14:44:38.000+00:00"
+                },
+                "git_committer": {
+                  "email": "srinath.chandrashekhar@levelops.io",
+                  "name": "ctlo2020",
+                  "date": "2022-02-25T14:44:38.000+00:00"
+                }
+              },
+              {
+                "sha": "777f7e2f6334c8bf5cbf5cd2affe93c825d52a3e",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/777f7e2f6334c8bf5cbf5cd2affe93c825d52a3e",
+                "author": {
+                  "type": "user",
+                  "login": "ctlo2020"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "ctlo2020"
+                },
+                "message": "update commons version",
+                "git_author": {
+                  "email": "srinath.chandrashekhar@levelops.io",
+                  "name": "ctlo2020",
+                  "date": "2022-02-25T15:31:38.000+00:00"
+                },
+                "git_committer": {
+                  "email": "srinath.chandrashekhar@levelops.io",
+                  "name": "ctlo2020",
+                  "date": "2022-02-25T15:31:38.000+00:00"
+                }
+              }
+            ],
+            "patches": [
+              "@@ -60,7 +60,7 @@ wrapper {\n     distributionType = Wrapper.DistributionType.ALL\n }\n \n-ext.levelopsCommonsVersion =\"v0.1.5134\"\n+ext.levelopsCommonsVersion =\"v0.1.5138\"\n \n \n ext.levelopsCommonsLib = { name -> [group: 'io.levelops.commons', name: name, version: levelopsCommonsVersion] }",
+              "@@ -158,7 +158,7 @@ else if (CollectionUtils.isNotEmpty(crossIntegrationTypes)){\n                             AggCacheUtils.cacheOrCallGeneric(disableCache, company,\n                                     \"/velocity/agg_\",\n                                     hash, List.of(), mapper, cacheService, null, null, null,\n-                                    () -> velocityAggsService.calculateVelocity(company, finalRequest, velocityConfigDTO, finalOuConfig))\n+                                    () -> velocityAggsService.calculateVelocity(company, originalRequest, finalRequest, velocityConfigDTO, finalOuConfig))\n                             ));\n                 });\n     }\n@@ -305,7 +305,7 @@ else if (CollectionUtils.isNotEmpty(crossIntegrationTypes)){\n                         AggCacheUtils.cacheOrCall(disableCache, company,\n                                 \"/velocity/aggs_values_\",\n                                 hash, List.of(), mapper, cacheService,\n-                                () -> velocityAggsService.calculateVelocityValues(company, finalRequest, velocityConfigDTO, finalOuConfig))\n+                                () -> velocityAggsService.calculateVelocityValues(company, originalRequest, finalRequest, velocityConfigDTO, finalOuConfig))\n                 ));\n         });\n     }\n@@ -340,7 +340,7 @@ else if (CollectionUtils.isNotEmpty(crossIntegrationTypes)){\n                         AggCacheUtils.cacheOrCallGeneric(disableCache, company,\n                                 \"/velocity/aggs_histogram_\",\n                                 hash, List.of(), mapper, cacheService, null, null, null,\n-                                () -> velocityAggsService.calculateVelocityHistogram(company, finalRequest, velocityConfigDTO, finalOuConfig))\n+                                () -> velocityAggsService.calculateVelocityHistogram(company, originalRequest, finalRequest, velocityConfigDTO, finalOuConfig))\n                 ));\n         });\n     }\n@@ -375,7 +375,7 @@ else if (CollectionUtils.isNotEmpty(crossIntegrationTypes)){\n                         AggCacheUtils.cacheOrCallGeneric(disableCache, company,\n                                 \"/velocity/aggs_histograms_\",\n                                 hash, List.of(), mapper, cacheService, null, null, null,\n-                                () -> velocityAggsService.calculateVelocityHistograms(company, finalRequest, velocityConfigDTO, finalOuConfig))\n+                                () -> velocityAggsService.calculateVelocityHistograms(company, originalRequest, finalRequest, velocityConfigDTO, finalOuConfig))\n                 ));\n         });\n     }\n@@ -401,7 +401,7 @@ else if (CollectionUtils.isNotEmpty(crossIntegrationTypes)){\n                 PaginatedResponse.of(\n                         request.getPage(),\n                         request.getPageSize(),\n-                        velocityAggsService.calculateVelocityHistogramsSerial(company, finalRequest, finalOuConfig)\n+                        velocityAggsService.calculateVelocityHistogramsSerial(company, originalRequest, finalRequest, finalOuConfig)\n                 ));\n         });\n     }",
+              "@@ -34,7 +34,6 @@\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.beans.factory.annotation.Qualifier;\n import org.springframework.beans.factory.annotation.Value;\n-import org.springframework.scheduling.annotation.Async;\n import org.springframework.stereotype.Service;\n \n import java.sql.SQLException;\n@@ -175,28 +174,34 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n     }\n \n     public List<DbAggregationResult> calculateVelocity(final String company,\n+                                                       DefaultListRequest originalFilter,\n                                                        DefaultListRequest filter,\n                                                        VelocityConfigDTO velocityConfigDTO,\n                                                        OUConfiguration ouConfig) throws SQLException, BadRequestException, JsonProcessingException {\n         WorkItemsType workItemsType = validateWorkItemsType(company, filter);\n+\n+        VelocityFilter velocityFilter = parseVelocityFilter(filter);\n+        if (velocityFilter.getAcross() == VelocityFilter.DISTINCT.values) {\n+            throw new BadRequestException(\"across value \" + velocityFilter.getAcross() + \" not supported!\");\n+        }\n+\n         JiraIssuesFilter jiraFilter = null;\n         WorkItemsFilter workItemsFilter = null;\n-        if (workItemsType == WorkItemsType.WORK_ITEM) {\n-            workItemsFilter = WorkItemsFilter.fromDefaultListRequest(filter, null, null);\n-        } else {\n-            jiraFilter = jiraFilterParser.createFilter(company, filter, null, null, null, null, true, true);\n+        if(workItemsType == WorkItemsType.WORK_ITEM)\n+            workItemsFilter = getWorkItemsFilter(velocityFilter.getCalculation(), filter, originalFilter);\n+        else {\n+            jiraFilter =  getJiraFilter(velocityFilter.getCalculation(), company, filter, originalFilter);\n             log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n         }\n+\n         log.info(\"jiraFilter = {}\", jiraFilter);\n         log.info(\"workItemsFilter = {}\", workItemsFilter);\n \n-        VelocityFilter velocityFilter = parseVelocityFilter(filter);\n-        if (velocityFilter.getAcross() == VelocityFilter.DISTINCT.values) {\n-            throw new BadRequestException(\"across value \" + velocityFilter.getAcross() + \" not supported!\");\n-        }\n-\n-        List<List<DbAggregationResult>> dbListResponse = velocityAggsDatabaseService.calculateVelocityWithoutStacks(company, velocityConfigDTO, velocityFilter, workItemsType, jiraFilter, workItemsFilter,\n-                parseWIMilestoneFilter(filter), parseSCMPrFilter(filter), parseCiCdJobRunsFilter(filter), getWorkItemFields(company, workItemsFilter), ouConfig, getDisablePrJiraCorrelation(company)).getRecords();\n+        List<List<DbAggregationResult>> dbListResponse = velocityAggsDatabaseService.calculateVelocityWithoutStacks(\n+                company, velocityConfigDTO, velocityFilter, workItemsType, jiraFilter, workItemsFilter,\n+                parseWIMilestoneFilter(filter), getScmPrFilter(velocityFilter.getCalculation(), filter, originalFilter),\n+                getCicdJobRunsFilter(filter, originalFilter), getWorkItemFields(company, workItemsFilter), ouConfig,\n+                getDisablePrJiraCorrelation(company)).getRecords();\n         if (CollectionUtils.isEmpty(dbListResponse)) {\n             return Collections.emptyList();\n         }\n@@ -213,29 +218,33 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n     }\n \n     public DbListResponse<DbAggregationResult> calculateVelocityValues(final String company,\n+                                                                       DefaultListRequest originalFilter,\n                                                                        DefaultListRequest filter,\n                                                                        VelocityConfigDTO velocityConfigDTO,\n                                                                        OUConfiguration ouConfig) throws SQLException, BadRequestException {\n         WorkItemsType workItemsType = validateWorkItemsType(company, filter);\n+        VelocityFilter velocityFilter = parseVelocityFilter(filter);\n+        if (velocityFilter.getAcross() != VelocityFilter.DISTINCT.values) {\n+            throw new BadRequestException(\"across value \" + velocityFilter.getAcross() + \" not supported! For this endpoint only \" + VelocityFilter.DISTINCT.values + \" is supported.\");\n+        }\n \n         JiraIssuesFilter jiraFilter = null;\n         WorkItemsFilter workItemsFilter = null;\n-        if (workItemsType == WorkItemsType.JIRA) {\n-            jiraFilter = jiraFilterParser.createFilter(company, filter, null, null, null, null, true, true);\n+        if(workItemsType == WorkItemsType.WORK_ITEM)\n+            workItemsFilter = getWorkItemsFilter(velocityFilter.getCalculation(), filter, originalFilter);\n+        else {\n+            jiraFilter =  getJiraFilter(velocityFilter.getCalculation(), company, filter, originalFilter);\n             log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n-        } else {\n-            workItemsFilter = WorkItemsFilter.fromDefaultListRequest(filter, null, null);\n         }\n+\n         log.info(\"jiraFilter = {}\", jiraFilter);\n         log.info(\"workItemsFilter = {}\", workItemsFilter);\n \n-        VelocityFilter velocityFilter = parseVelocityFilter(filter);\n-        if (velocityFilter.getAcross() != VelocityFilter.DISTINCT.values) {\n-            throw new BadRequestException(\"across value \" + velocityFilter.getAcross() + \" not supported! For this endpoint only \" + VelocityFilter.DISTINCT.values + \" is supported.\");\n-        }\n-\n-        DbListResponse<DbAggregationResult> dbListResponse = velocityAggsDatabaseService.calculateVelocityValues(company, velocityConfigDTO, velocityFilter, workItemsType, jiraFilter, workItemsFilter,\n-                parseWIMilestoneFilter(filter), parseSCMPrFilter(filter), parseCiCdJobRunsFilter(filter), getWorkItemFields(company, workItemsFilter), ouConfig, getDisablePrJiraCorrelation(company));\n+        DbListResponse<DbAggregationResult> dbListResponse = velocityAggsDatabaseService.calculateVelocityValues(\n+                company, velocityConfigDTO, velocityFilter, workItemsType, jiraFilter, workItemsFilter,\n+                parseWIMilestoneFilter(filter), getScmPrFilter(velocityFilter.getCalculation(), filter, originalFilter),\n+                getCicdJobRunsFilter(filter, originalFilter), getWorkItemFields(company, workItemsFilter), ouConfig,\n+                getDisablePrJiraCorrelation(company));\n         if (CollectionUtils.isEmpty(dbListResponse.getRecords())) {\n             return DbListResponse.of(Collections.emptyList(), 0);\n         }\n@@ -244,22 +253,12 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n     }\n \n     public DbListResponse<DbHistogramBucket> calculateVelocityHistogram(final String company,\n+                                                                        DefaultListRequest originalFilter,\n                                                                         DefaultListRequest filter,\n                                                                         VelocityConfigDTO velocityConfigDTO,\n                                                                         OUConfiguration ouConfig) throws SQLException, BadRequestException {\n         WorkItemsType workItemsType = validateWorkItemsType(company, filter);\n \n-        JiraIssuesFilter jiraFilter = null;\n-        WorkItemsFilter workItemsFilter = null;\n-        if (workItemsType == WorkItemsType.JIRA) {\n-            jiraFilter = jiraFilterParser.createFilter(company, filter, null, null, null, null, true, true);\n-            log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n-        } else {\n-            workItemsFilter = WorkItemsFilter.fromDefaultListRequest(filter, null, null);\n-        }\n-        log.info(\"jiraFilter = {}\", jiraFilter);\n-        log.info(\"workItemsFilter = {}\", workItemsFilter);\n-\n         VelocityFilter velocityFilter = parseVelocityFilter(filter);\n         if (velocityFilter.getAcross() != VelocityFilter.DISTINCT.histogram) {\n             throw new BadRequestException(\"across value \" + velocityFilter.getAcross() + \" not supported! For this endpoint only \" + VelocityFilter.DISTINCT.histogram + \" is supported.\");\n@@ -271,8 +270,22 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n             throw new BadRequestException(\"histogram bucket count cannot be null\");\n         }\n \n-        DbHistogramResult dbHistogramResult = velocityAggsDatabaseService.calculateVelocityStageHistogram(company, velocityConfigDTO, velocityFilter, workItemsType, jiraFilter, workItemsFilter,\n-                parseWIMilestoneFilter(filter), parseSCMPrFilter(filter), parseCiCdJobRunsFilter(filter), getWorkItemFields(company, workItemsFilter), ouConfig, getDisablePrJiraCorrelation(company));\n+        JiraIssuesFilter jiraFilter = null;\n+        WorkItemsFilter workItemsFilter = null;\n+        if(workItemsType == WorkItemsType.WORK_ITEM)\n+            workItemsFilter = getWorkItemsFilter(velocityFilter.getCalculation(), filter, originalFilter);\n+        else {\n+            jiraFilter =  getJiraFilter(velocityFilter.getCalculation(), company, filter, originalFilter);\n+            log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n+        }\n+        log.info(\"jiraFilter = {}\", jiraFilter);\n+        log.info(\"workItemsFilter = {}\", workItemsFilter);\n+\n+        DbHistogramResult dbHistogramResult = velocityAggsDatabaseService.calculateVelocityStageHistogram(\n+                company, velocityConfigDTO, velocityFilter, workItemsType, jiraFilter, workItemsFilter,\n+                parseWIMilestoneFilter(filter), getScmPrFilter(velocityFilter.getCalculation(), filter, originalFilter),\n+                getCicdJobRunsFilter(filter, originalFilter), getWorkItemFields(company, workItemsFilter), ouConfig,\n+                getDisablePrJiraCorrelation(company));\n         if (CollectionUtils.isEmpty(dbHistogramResult.getBuckets())) {\n             return DbListResponse.of(Collections.emptyList(), 0);\n         }\n@@ -295,22 +308,11 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n     }\n \n     public DbListResponse<DbHistogramResult> calculateVelocityHistogramsSerial(final String company,\n+                                                                               DefaultListRequest originalFilter,\n                                                                                DefaultListRequest filter,\n                                                                                OUConfiguration ouConfig) throws SQLException, BadRequestException, NotFoundException {\n         WorkItemsType workItemsType = validateWorkItemsType(company, filter);\n \n-        JiraIssuesFilter jiraFilter = null;\n-        WorkItemsFilter workItemsFilter = null;\n-        if (workItemsType == WorkItemsType.JIRA) {\n-            jiraFilter = jiraFilterParser.createFilter(company, filter, null, null, null, null, true, true);\n-            log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n-        } else {\n-            workItemsFilter = WorkItemsFilter.fromDefaultListRequest(filter, null, null);\n-        }\n-        log.info(\"jiraFilter = {}\", jiraFilter);\n-        log.info(\"workItemsFilter = {}\", workItemsFilter);\n-\n-\n         VelocityFilter velocityFilter = parseVelocityFilter(filter);\n         if (velocityFilter.getAcross() != VelocityFilter.DISTINCT.histogram) {\n             throw new BadRequestException(\"across value \" + velocityFilter.getAcross() + \" not supported! For this endpoint only \" + VelocityFilter.DISTINCT.histogram + \" is supported.\");\n@@ -323,40 +325,39 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n         VelocityConfigDTO velocityConfigDTO = getVelocityConfig(company, filter);\n         log.info(\"velocityConfigDTO = {}\", velocityConfigDTO);\n \n+        JiraIssuesFilter jiraFilter = null;\n+        WorkItemsFilter workItemsFilter = null;\n+        if(workItemsType == WorkItemsType.WORK_ITEM)\n+            workItemsFilter = getWorkItemsFilter(velocityFilter.getCalculation(), filter, originalFilter);\n+        else {\n+            jiraFilter =  getJiraFilter(velocityFilter.getCalculation(), company, filter, originalFilter);\n+            log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n+        }\n+        log.info(\"jiraFilter = {}\", jiraFilter);\n+        log.info(\"workItemsFilter = {}\", workItemsFilter);\n+\n         List<VelocityConfigDTO.Stage> stages = getAllStages(velocityConfigDTO);\n         List<DbHistogramResult> stageResults = new ArrayList<>();\n         for (int i = 0; i < stages.size(); i++) {\n             String stageName = stages.get(i).getName();\n             VelocityFilter velocityFilterUpdated = velocityFilter.toBuilder().histogramStageName(stageName).build();\n-            DbHistogramResult dbHistogramResult = velocityAggsDatabaseService.calculateVelocityStageHistogram(company, velocityConfigDTO, velocityFilterUpdated, workItemsType, jiraFilter, workItemsFilter, parseWIMilestoneFilter(filter), parseSCMPrFilter(filter), parseCiCdJobRunsFilter(filter), getWorkItemFields(company, workItemsFilter), ouConfig, getDisablePrJiraCorrelation(company));\n+            DbHistogramResult dbHistogramResult = velocityAggsDatabaseService.calculateVelocityStageHistogram(company,\n+                    velocityConfigDTO, velocityFilterUpdated, workItemsType, jiraFilter, workItemsFilter,\n+                    parseWIMilestoneFilter(filter), getScmPrFilter(velocityFilter.getCalculation(), filter, originalFilter),\n+                    getCicdJobRunsFilter(filter, originalFilter),\n+                    getWorkItemFields(company, workItemsFilter), ouConfig, getDisablePrJiraCorrelation(company));\n             dbHistogramResult = dbHistogramResult.toBuilder().index(i).name(stageName).build();\n             stageResults.add(dbHistogramResult);\n         }\n         return DbListResponse.of(stageResults, stageResults.size());\n     }\n \n     public DbListResponse<DbHistogramResult> calculateVelocityHistograms(final String company,\n+                                                                         DefaultListRequest originalFilter,\n                                                                          DefaultListRequest filter,\n                                                                          VelocityConfigDTO velocityConfigDTO,\n                                                                          OUConfiguration ouConfig) throws SQLException, BadRequestException {\n         WorkItemsType workItemsType = validateWorkItemsType(company, filter);\n-\n-        JiraIssuesFilter jiraFilter = null;\n-        WorkItemsFilter workItemsFilter = null;\n-        if (workItemsType == WorkItemsType.JIRA) {\n-            jiraFilter = jiraFilterParser.createFilter(company, filter, null, null, null, null, true, true);\n-            log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n-        } else {\n-            workItemsFilter = WorkItemsFilter.fromDefaultListRequest(filter, null, null);\n-        }\n-        log.info(\"jiraFilter = {}\", jiraFilter);\n-        log.info(\"workItemsFilter = {}\", workItemsFilter);\n-\n-        WorkItemsMilestoneFilter workItemsMilestoneFilter = parseWIMilestoneFilter(filter);\n-        ScmPrFilter scmPrFilter = parseSCMPrFilter(filter);\n-        CiCdJobRunsFilter ciCdJobRunsFilter = parseCiCdJobRunsFilter(filter);\n-        List<DbWorkItemField> workItemFields = getWorkItemFields(company, workItemsFilter);\n-\n         VelocityFilter velocityFilter = parseVelocityFilter(filter);\n         if (velocityFilter.getAcross() != VelocityFilter.DISTINCT.histogram) {\n             throw new BadRequestException(\"across value \" + velocityFilter.getAcross() + \" not supported! For this endpoint only \" + VelocityFilter.DISTINCT.histogram + \" is supported.\");\n@@ -366,12 +367,28 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n             throw new BadRequestException(\"histogram bucket count cannot be null\");\n         }\n \n+        WorkItemsMilestoneFilter workItemsMilestoneFilter = parseWIMilestoneFilter(filter);\n+        JiraIssuesFilter jiraFilter = null;\n+        WorkItemsFilter workItemsFilter = null;\n+        if(workItemsType == WorkItemsType.WORK_ITEM)\n+            workItemsFilter = getWorkItemsFilter(velocityFilter.getCalculation(), filter, originalFilter);\n+        else {\n+            jiraFilter =  getJiraFilter(velocityFilter.getCalculation(), company, filter, originalFilter);\n+            log.info(\"ingested_at = {}\", jiraFilter.getIngestedAt());\n+        }\n+        log.info(\"jiraFilter = {}\", jiraFilter);\n+        log.info(\"workItemsFilter = {}\", workItemsFilter);\n+        List<DbWorkItemField> workItemFields = getWorkItemFields(company, workItemsFilter);\n+\n         List<VelocityConfigDTO.Stage> stages = getAllStages(velocityConfigDTO);\n         List<CompletableFuture<DbHistogramResult>> futures = new ArrayList<>();\n         for (int i = 0; i < stages.size(); i++) {\n             String stageName = stages.get(i).getName();\n             VelocityFilter velocityFilterUpdated = velocityFilter.toBuilder().histogramStageName(stageName).build();\n-            futures.add(calculateVelocityStageHistogramAsync(company, velocityConfigDTO, velocityFilterUpdated, workItemsType, jiraFilter, workItemsFilter, workItemsMilestoneFilter, scmPrFilter, ciCdJobRunsFilter, workItemFields, i, stageName, ouConfig));\n+            futures.add(calculateVelocityStageHistogramAsync(company, velocityConfigDTO, velocityFilterUpdated,\n+                    workItemsType, jiraFilter, workItemsFilter, workItemsMilestoneFilter,\n+                    getScmPrFilter(velocityFilter.getCalculation(), filter, originalFilter),\n+                    getCicdJobRunsFilter(filter, originalFilter), workItemFields, i, stageName, ouConfig));\n         }\n \n         List<DbHistogramResult> stageResults = futures.stream()\n@@ -395,5 +412,41 @@ private VelocityFilter parseVelocityFilter(final DefaultListRequest filter) {\n             }\n         }, velocityTaskExecutor);\n     }\n+\n+    private JiraIssuesFilter getJiraFilter(VelocityFilter.CALCULATION calculation, String company, DefaultListRequest filter, DefaultListRequest originalFilter) throws SQLException, BadRequestException {\n+        boolean applyOu = calculation == VelocityFilter.CALCULATION.ticket_velocity || filter.getApplyOuOnVelocityReport();\n+        if(applyOu)\n+            return jiraFilterParser.createFilter(company, filter, null, null, null,\n+                    null, true, true);\n+        else\n+            return jiraFilterParser.createFilter(company, originalFilter, null, null, null,\n+                    null, true, true);\n+    }\n+\n+    private WorkItemsFilter getWorkItemsFilter(VelocityFilter.CALCULATION calculation, DefaultListRequest filter, DefaultListRequest originalFilter) throws BadRequestException {\n+        boolean applyOu = calculation == VelocityFilter.CALCULATION.ticket_velocity || filter.getApplyOuOnVelocityReport();\n+        if(applyOu)\n+            return WorkItemsFilter.fromDefaultListRequest(filter, null, null);\n+        else\n+            return WorkItemsFilter.fromDefaultListRequest(originalFilter, null, null);\n+    }\n+\n+    private ScmPrFilter getScmPrFilter(VelocityFilter.CALCULATION calculation, DefaultListRequest filter, DefaultListRequest originalFilter) throws BadRequestException {\n+        boolean applyOu = calculation == VelocityFilter.CALCULATION.pr_velocity || filter.getApplyOuOnVelocityReport();\n+        if(applyOu) {\n+            return parseSCMPrFilter(filter);\n+        } else {\n+            return parseSCMPrFilter(originalFilter);\n+        }\n+    }\n+\n+    private CiCdJobRunsFilter getCicdJobRunsFilter(DefaultListRequest filter, DefaultListRequest originalFilter) throws BadRequestException {\n+        boolean applyOu = filter.getApplyOuOnVelocityReport();\n+        if(applyOu) {\n+            return parseCiCdJobRunsFilter(filter);\n+        } else {\n+            return parseCiCdJobRunsFilter(originalFilter);\n+        }\n+    }\n }\n "
+            ]
+          },
+          {
+            "id": "862783392",
+            "number": 1370,
+            "state": "closed",
+            "locked": false,
+            "title": "LEV-4818 updated commons",
+            "user": {
+              "type": "user",
+              "login": "maxime-levelops"
+            },
+            "created_at": "2022-02-24T19:50:01.000+00:00",
+            "updated_at": "2022-02-24T19:50:09.000+00:00",
+            "closed_at": "2022-02-24T19:50:06.000+00:00",
+            "merged_at": "2022-02-24T19:50:06.000+00:00",
+            "merge_commit_sha": "394220e3574131709e475a0b786c7d16abb6dd44",
+            "assignees": [],
+            "requested_reviewers": [],
+            "requested_teams": [],
+            "labels": [],
+            "head": {
+              "label": "levelops:maxime-dev",
+              "ref": "maxime-dev",
+              "sha": "57f6e494f34cdee8411fb62d5115299fdff7c070",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "base": {
+              "label": "levelops:dev",
+              "ref": "dev",
+              "sha": "005c8eac07dcb2eecf8e3e2641d890823f5d15f0",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "author_association": "CONTRIBUTOR",
+            "reviews": [],
+            "pr_commits": [
+              {
+                "sha": "57f6e494f34cdee8411fb62d5115299fdff7c070",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/57f6e494f34cdee8411fb62d5115299fdff7c070",
+                "author": {
+                  "type": "user",
+                  "login": "maxime-levelops"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "maxime-levelops"
+                },
+                "message": "LEV-4818 updated commons",
+                "git_author": {
+                  "email": "maxime@levelops.io",
+                  "name": "Maxime Bellier",
+                  "date": "2022-02-24T19:49:34.000+00:00"
+                },
+                "git_committer": {
+                  "email": "maxime@levelops.io",
+                  "name": "Maxime Bellier",
+                  "date": "2022-02-24T19:49:34.000+00:00"
+                }
+              }
+            ],
+            "patches": [
+              "@@ -60,7 +60,7 @@ wrapper {\n     distributionType = Wrapper.DistributionType.ALL\n }\n \n-ext.levelopsCommonsVersion =\"v0.1.5132\"\n+ext.levelopsCommonsVersion =\"v0.1.5134\"\n \n \n ext.levelopsCommonsLib = { name -> [group: 'io.levelops.commons', name: name, version: levelopsCommonsVersion] }"
+            ]
+          },
+          {
+            "id": "861648237",
+            "number": 1369,
+            "state": "closed",
+            "locked": false,
+            "title": "Lev 4687",
+            "user": {
+              "type": "user",
+              "login": "satish-levelops"
+            },
+            "created_at": "2022-02-23T17:20:56.000+00:00",
+            "updated_at": "2022-02-24T05:43:57.000+00:00",
+            "closed_at": "2022-02-24T05:43:57.000+00:00",
+            "merged_at": "2022-02-24T05:43:57.000+00:00",
+            "merge_commit_sha": "005c8eac07dcb2eecf8e3e2641d890823f5d15f0",
+            "assignees": [],
+            "requested_reviewers": [],
+            "requested_teams": [],
+            "labels": [],
+            "head": {
+              "label": "levelops:LEV-4687",
+              "ref": "LEV-4687",
+              "sha": "6c7220514182ecb9b77e36717bda8bb982a9cc21",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "base": {
+              "label": "levelops:dev",
+              "ref": "dev",
+              "sha": "a1d3192131717e8ace23fec2124af3774d3beac7",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "author_association": "CONTRIBUTOR",
+            "reviews": [
+              {
+                "id": "891436570",
+                "user": {
+                  "type": "user",
+                  "login": "viraj-levelops"
+                },
+                "body": "",
+                "state": "COMMENTED",
+                "author_association": "CONTRIBUTOR",
+                "submitted_at": "2022-02-23T17:36:31.000+00:00",
+                "commit_id": "d4ff36913da0f9494abd3e3864854bcb307f4943",
+                "html_url": "https://github.com/levelops/api-levelops/pull/1369#pullrequestreview-891436570"
+              },
+              {
+                "id": "891468035",
+                "user": {
+                  "type": "user",
+                  "login": "satish-levelops"
+                },
+                "body": "",
+                "state": "COMMENTED",
+                "author_association": "CONTRIBUTOR",
+                "submitted_at": "2022-02-23T18:01:00.000+00:00",
+                "commit_id": "ef0dc126c9baa5ec3149a8dfdc3532d45b892025",
+                "html_url": "https://github.com/levelops/api-levelops/pull/1369#pullrequestreview-891468035"
+              },
+              {
+                "id": "891999632",
+                "user": {
+                  "type": "user",
+                  "login": "viraj-levelops"
+                },
+                "body": "lgtm",
+                "state": "APPROVED",
+                "author_association": "CONTRIBUTOR",
+                "submitted_at": "2022-02-24T05:37:53.000+00:00",
+                "commit_id": "ef0dc126c9baa5ec3149a8dfdc3532d45b892025",
+                "html_url": "https://github.com/levelops/api-levelops/pull/1369#pullrequestreview-891999632"
+              }
+            ],
+            "pr_commits": [
+              {
+                "sha": "b5d54b66c25e0f72cf4b3ef60bcc4ea39b92b4bf",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/b5d54b66c25e0f72cf4b3ef60bcc4ea39b92b4bf",
+                "message": "API for ScmActivity changes implemented",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T07:33:44.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T07:33:44.000+00:00"
+                }
+              },
+              {
+                "sha": "59912de05593eca1f90d04a471e5c2e7f4dd370e",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/59912de05593eca1f90d04a471e5c2e7f4dd370e",
+                "message": "Updated the common version.",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T11:21:41.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T11:21:41.000+00:00"
+                }
+              },
+              {
+                "sha": "694af546f6543b7bce5437b55eff1a63301fed41",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/694af546f6543b7bce5437b55eff1a63301fed41",
+                "author": {
+                  "type": "user",
+                  "login": "ashish-levelops"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "web-flow"
+                },
+                "message": "Merge branch 'dev' into LEV-4687",
+                "git_author": {
+                  "email": "87694242+ashish-levelops@users.noreply.github.com",
+                  "name": "ashish-levelops",
+                  "date": "2022-02-11T11:35:42.000+00:00"
+                },
+                "git_committer": {
+                  "email": "noreply@github.com",
+                  "name": "GitHub",
+                  "date": "2022-02-11T11:35:42.000+00:00"
+                }
+              },
+              {
+                "sha": "8de58619fb4584552dab948aa7eefefc2f133e1e",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/8de58619fb4584552dab948aa7eefefc2f133e1e",
+                "message": "Modified to fetch and pass the integration users for LEV-4687",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T18:21:42.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T18:21:42.000+00:00"
+                }
+              },
+              {
+                "sha": "9783f0d1181546cfb0b6de6cc5b57923539c7327",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/9783f0d1181546cfb0b6de6cc5b57923539c7327",
+                "message": "Merge remote-tracking branch 'origin/LEV-4687' into LEV-4687\n\n# Conflicts:\n#\tbuild.gradle",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T18:22:59.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-11T18:22:59.000+00:00"
+                }
+              },
+              {
+                "sha": "710bd509be97c335bf64ee2d306e48f605dbb1cf",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/710bd509be97c335bf64ee2d306e48f605dbb1cf",
+                "author": {
+                  "type": "user",
+                  "login": "satish-levelops"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "web-flow"
+                },
+                "message": "Merge branch 'dev' into LEV-4687",
+                "git_author": {
+                  "email": "93243519+satish-levelops@users.noreply.github.com",
+                  "name": "satish-levelops",
+                  "date": "2022-02-11T18:32:39.000+00:00"
+                },
+                "git_committer": {
+                  "email": "noreply@github.com",
+                  "name": "GitHub",
+                  "date": "2022-02-11T18:32:39.000+00:00"
+                }
+              },
+              {
+                "sha": "ef3c7f3f1bba4939ab63abe5a08b047bafaca509",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/ef3c7f3f1bba4939ab63abe5a08b047bafaca509",
+                "message": "LEV-4687 Added the pagination logic.",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T17:18:12.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T17:18:12.000+00:00"
+                }
+              },
+              {
+                "sha": "d4ff36913da0f9494abd3e3864854bcb307f4943",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/d4ff36913da0f9494abd3e3864854bcb307f4943",
+                "author": {
+                  "type": "user",
+                  "login": "satish-levelops"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "web-flow"
+                },
+                "message": "Merge branch 'dev' into LEV-4687",
+                "git_author": {
+                  "email": "93243519+satish-levelops@users.noreply.github.com",
+                  "name": "satish-levelops",
+                  "date": "2022-02-23T17:24:32.000+00:00"
+                },
+                "git_committer": {
+                  "email": "noreply@github.com",
+                  "name": "GitHub",
+                  "date": "2022-02-23T17:24:32.000+00:00"
+                }
+              },
+              {
+                "sha": "0405963ca0aed53e42125f9fdc7c373c9b74d67b",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/0405963ca0aed53e42125f9fdc7c373c9b74d67b",
+                "message": "LEV-4687 Added back the page size as per request.",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T17:57:10.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T17:57:10.000+00:00"
+                }
+              },
+              {
+                "sha": "ef0dc126c9baa5ec3149a8dfdc3532d45b892025",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/ef0dc126c9baa5ec3149a8dfdc3532d45b892025",
+                "message": "Merge remote-tracking branch 'origin/LEV-4687' into LEV-4687",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T17:57:52.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T17:57:52.000+00:00"
+                }
+              },
+              {
+                "sha": "6c7220514182ecb9b77e36717bda8bb982a9cc21",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/6c7220514182ecb9b77e36717bda8bb982a9cc21",
+                "author": {
+                  "type": "user",
+                  "login": "satish-levelops"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "web-flow"
+                },
+                "message": "Merge branch 'dev' into LEV-4687",
+                "git_author": {
+                  "email": "93243519+satish-levelops@users.noreply.github.com",
+                  "name": "satish-levelops",
+                  "date": "2022-02-24T05:42:51.000+00:00"
+                },
+                "git_committer": {
+                  "email": "noreply@github.com",
+                  "name": "GitHub",
+                  "date": "2022-02-24T05:42:51.000+00:00"
+                }
+              }
+            ],
+            "patches": [
+              "@@ -17,6 +17,7 @@\n import io.levelops.commons.models.DefaultListRequest;\n import kotlin.collections.ArrayDeque;\n import lombok.extern.log4j.Log4j2;\n+import org.apache.commons.collections4.CollectionUtils;\n import org.springframework.beans.factory.annotation.Autowired;\n import org.springframework.stereotype.Service;\n \n@@ -45,16 +46,20 @@\n         List<OUConfiguration> ouConfig = orgUnitHelper.getOuConfigurationList(company, null, ouList);\n         List<Integer> integrationList = ouConfig.get(0).getSections().stream().map(DBOrgContentSection::getIntegrationId).collect(Collectors.toList());\n         List<UUID> integrationUser=List.of();\n+        DbListResponse<OrgUserDetails> orgUserDetailsDbListResponse=DbListResponse.of(null,0);\n          if(scmActivityFilter.getAcross().equals(ScmActivityFilter.DISTINCT.integration_user)) {\n              DBOrgAccessUsers dbOrgAccessUsers=orgAccessValidationService.getAllAccessUsersByOuId(company, \"\", ouList);\n              List<UUID> orgUsersUUID=dbOrgAccessUsers.getAuthorizedUserList().stream().collect(Collectors.toList());\n              DevProductivityUserIds devProductivityUserIds=DevProductivityUserIds.builder().userIdType(IdType.OU_USER_IDS).userIdList(orgUsersUUID).build();\n-             DbListResponse<OrgUserDetails> orgUserDetailsDbListResponse=orgIdentityService.getUserIdentityForAllIntegrations(company,devProductivityUserIds,filter.getPage(),filter.getPageSize());\n+             if(!CollectionUtils.isEmpty(devProductivityUserIds.getUserIdList())) {\n+                 orgUserDetailsDbListResponse = orgIdentityService.getUserIdentityForAllIntegrations(company, devProductivityUserIds, filter.getPage(), filter.getPageSize());\n+             }\n              List<IntegrationUserDetails> integrationUserDetails= orgUserDetailsDbListResponse.getRecords().stream().map(OrgUserDetails::getIntegrationUserDetailsList).collect(Collectors.toList()).stream().flatMap(l-> l.stream()).collect(Collectors.toList())\n                      .stream().filter(user->user.getIntegrationType().isScmFamily()).collect(Collectors.toList());\n               integrationUser=integrationUserDetails.stream().map(IntegrationUserDetails::getIntegrationUserId).collect(Collectors.toList());\n          }\n        List<ScmActivities> scmActivitiesList= scmActivitiesEngine.calculateScmActivities(company,integrationUser,integrationList,scmActivityFilter.getAcross(),scmActivityFilter.getTimeRange(),null);\n-       return DbListResponse.of(scmActivitiesList,scmActivitiesList.size());\n+        List<ScmActivities> paginatedScmActivitiesList= scmActivitiesList.stream().skip(filter.getPage()*filter.getPageSize()).limit(filter.getPageSize()).collect(Collectors.toList());\n+       return DbListResponse.of(paginatedScmActivitiesList,scmActivitiesList.size());\n     }\n }"
+            ]
+          },
+          {
+            "id": "861480748",
+            "number": 1368,
+            "state": "closed",
+            "locked": false,
+            "title": "LEV-4827 - Dev Prod - duplicate records are showing in the Average Issue Resolution Time",
+            "user": {
+              "type": "user",
+              "login": "ashish-levelops"
+            },
+            "body": "…sue Resolution Time",
+            "created_at": "2022-02-23T14:33:16.000+00:00",
+            "updated_at": "2022-02-23T14:33:50.000+00:00",
+            "closed_at": "2022-02-23T14:33:50.000+00:00",
+            "merged_at": "2022-02-23T14:33:50.000+00:00",
+            "merge_commit_sha": "95f8f4aa1068c60dce6d8ebacd2046b6618d583b",
+            "assignees": [],
+            "requested_reviewers": [],
+            "requested_teams": [],
+            "labels": [],
+            "head": {
+              "label": "levelops:dev-ashish",
+              "ref": "dev-ashish",
+              "sha": "b6f680d8c80a281cd3052aac262c7c624731e006",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "base": {
+              "label": "levelops:dev",
+              "ref": "dev",
+              "sha": "57ee3b50ea6821cd9bbdfc0bcdea0da781b67529",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "author_association": "CONTRIBUTOR",
+            "reviews": [],
+            "pr_commits": [
+              {
+                "sha": "b6f680d8c80a281cd3052aac262c7c624731e006",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/b6f680d8c80a281cd3052aac262c7c624731e006",
+                "message": "LEV-4827 - Dev Prod - duplicate records are showing in the Average Issue Resolution Time",
+                "git_author": {
+                  "email": "ashish@levelops.com",
+                  "name": "Ashish",
+                  "date": "2022-02-23T14:32:48.000+00:00"
+                },
+                "git_committer": {
+                  "email": "ashish@levelops.com",
+                  "name": "Ashish",
+                  "date": "2022-02-23T14:32:48.000+00:00"
+                }
+              }
+            ],
+            "patches": [
+              "@@ -60,7 +60,7 @@ wrapper {\n     distributionType = Wrapper.DistributionType.ALL\n }\n \n-ext.levelopsCommonsVersion =\"v0.1.5121\"\n+ext.levelopsCommonsVersion =\"v0.1.5128\"\n \n \n ext.levelopsCommonsLib = { name -> [group: 'io.levelops.commons', name: name, version: levelopsCommonsVersion] }"
+            ]
+          },
+          {
+            "id": "861315870",
+            "number": 1367,
+            "state": "closed",
+            "locked": false,
+            "title": "LEV-4818 updated the common Version.",
+            "user": {
+              "type": "user",
+              "login": "satish-levelops"
+            },
+            "created_at": "2022-02-23T11:37:36.000+00:00",
+            "updated_at": "2022-02-23T12:14:52.000+00:00",
+            "closed_at": "2022-02-23T12:14:52.000+00:00",
+            "merged_at": "2022-02-23T12:14:52.000+00:00",
+            "merge_commit_sha": "57ee3b50ea6821cd9bbdfc0bcdea0da781b67529",
+            "assignees": [],
+            "requested_reviewers": [
+              {
+                "type": "user",
+                "login": "ashish-levelops"
+              }
+            ],
+            "requested_teams": [],
+            "labels": [],
+            "head": {
+              "label": "levelops:LEV-4818",
+              "ref": "LEV-4818",
+              "sha": "82c8056c3b25e2dba69a5f82004a00da7e77f9f0",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "base": {
+              "label": "levelops:dev",
+              "ref": "dev",
+              "sha": "70e9d52bb52a1b9f82e40d326f47a0584d6fd325",
+              "user": {
+                "type": "organization",
+                "login": "levelops"
+              },
+              "repo": {
+                "id": "201335174",
+                "name": "api-levelops",
+                "full_name": "levelops/api-levelops"
+              }
+            },
+            "author_association": "CONTRIBUTOR",
+            "reviews": [],
+            "pr_commits": [
+              {
+                "sha": "64848ec09b356d4344552123581d64218508565f",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/64848ec09b356d4344552123581d64218508565f",
+                "message": "LEV-4818 updated the common Version.",
+                "git_author": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T11:36:32.000+00:00"
+                },
+                "git_committer": {
+                  "email": "satish@levelops.io",
+                  "name": "satishkumarsingh",
+                  "date": "2022-02-23T11:36:32.000+00:00"
+                }
+              },
+              {
+                "sha": "82c8056c3b25e2dba69a5f82004a00da7e77f9f0",
+                "url": "https://api.github.com/repos/levelops/api-levelops/commits/82c8056c3b25e2dba69a5f82004a00da7e77f9f0",
+                "author": {
+                  "type": "user",
+                  "login": "satish-levelops"
+                },
+                "committer": {
+                  "type": "user",
+                  "login": "web-flow"
+                },
+                "message": "Merge branch 'dev' into LEV-4818",
+                "git_author": {
+                  "email": "93243519+satish-levelops@users.noreply.github.com",
+                  "name": "satish-levelops",
+                  "date": "2022-02-23T11:48:51.000+00:00"
+                },
+                "git_committer": {
+                  "email": "noreply@github.com",
+                  "name": "GitHub",
+                  "date": "2022-02-23T11:48:51.000+00:00"
+                }
+              }
+            ],
+            "patches": [
+              "@@ -60,7 +60,8 @@ wrapper {\n     distributionType = Wrapper.DistributionType.ALL\n }\n \n-ext.levelopsCommonsVersion = \"v0.1.5100-test\"\n+ext.levelopsCommonsVersion =\"v0.1.5121\"\n+\n \n ext.levelopsCommonsLib = { name -> [group: 'io.levelops.commons', name: name, version: levelopsCommonsVersion] }\n "
+            ]
+          }
+        ]
+      }
+    ],
+    "count": 1,
+    "_metadata": {
+      "integration_key": {
+        "tenant_id": "foo",
+        "integration_id": "1815"
+      },
+      "integration_type": "github",
+      "data_type": "pull_requests",
+      "page_number": 1
+    }
+  }

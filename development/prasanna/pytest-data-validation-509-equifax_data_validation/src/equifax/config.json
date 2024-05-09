@@ -1,0 +1,69 @@
+{
+  "All Product Lines": "55",
+  "All Product Lines": {
+    "Affordable Care Act (EWS Tech) - Segment": "321",
+    "International (EWS Tech) - Segment": "340",
+    "Customer & Data Enablement - Segment": "377",
+    "Employer Services - Segment": "379",
+    "Verification Services - Segment": "380"
+  },
+  "Customer & Data Enablement": {
+    "Tribe - Authentication & Authorization (AuthNZ) (EWS Tech)": "335",
+    "Tribe - Customer Partner Onboarding": "332",
+    "Tribe - Data Acquisition (EWS Tech)": "323",
+    "Tribe - Data Assets (EWS Tech)": "322",
+    "Tribe - Data Engineering & Analytics": "376"
+  },
+  "Employer Services - Segment": {
+    "ES Platform Services (EWS Tech)": "331",
+    "Tribe - AE-UPS ATS (EWS Tech)": "328",
+    "Tribe - Employee Products (EWS Tech)": "338",
+    "Tribe - Onboarding Cloud Native (EWS Tech)": "325",
+    "Tribe - Unemployment Claims Products (EWS Tech)": "330",
+    "Tribe - WOTC (EWS Tech)": "324"
+  },
+  "Verification Services - Segment": {
+    "Tribe - VS Platform Services (EWS Tech)": "326",
+    "Tribe - Mortgage & Financial Services (EWS Tech)": "327",
+    "Tribe - Solutions Enablement (EWS Tech)": "329",
+    "Tribe - Employer Verifications (EWS Tech)": "339",
+    "Tribe - Talent Solutions (EWS Tech)": "341",
+    "Tribe - Government (EWS Tech)": "334"
+  },
+  "tribe_ous": [
+    "335",
+    "332",
+    "323",
+    "322",
+    "376",
+    "328",
+    "338",
+    "325",
+    "330",
+    "324",
+    "326",
+    "327",
+    "329",
+    "339",
+    "341",
+    "334"
+  ],
+  "table_url": "config-tables/6a95ea28-efc7-4d00-8213-4753c132ad15?expand=schema,rows,history",
+  "velocity_url": "jira_issues/velocity_stage_times_report",
+  "release_table_report": "jira_issues/release_table_report",
+  "release_table_report_list": "jira_issues/release_table_report/list",
+  "jira_list": "jira_issues/list",
+  "agile_raw_data_table_url": "config-tables/1d893d2c-d70f-45f4-a230-83c2740c9eea?expand=schema,rows,history",
+  "raw_stats_url": "dev_productivity/reports/fixed_intervals/raw_stats/org/users",
+  "time_interval": "LAST_MONTH",
+  "time_interval_quarter": "LAST_QUARTER",
+  "raw_stat_org_id": "214",
+  "org_unit_list": "org/units/list",
+  "ou_category_id": [
+    "ac8d5451-6fdc-4eef-83ea-797a7ab541b6"
+  ],
+  "developer_pr_mark": 5,
+  "QE_pr_mark": 2,
+  "SRE_pr_mark": 2,
+  "velocity_story_url": "jira_issues/list"
+}

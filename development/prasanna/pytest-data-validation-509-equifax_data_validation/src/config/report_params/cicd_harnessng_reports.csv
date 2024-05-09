@@ -1,0 +1,17 @@
+report,filters,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24
+job_count,filters,rollback,tags,end_time,repositories,job_normalized_full_names,job_names,projects,services,job_statuses,stage_status,branches,step_status,step_name,stage_name,infrastructures,environments,parameters,deployment_types,cicd_user_ids,branches,stage_name,step_name,stage_status,step_status
+job_count,x-axis,job_status,job_normalized_full_name,cicd_user_id,instance_name,job_name,project_name,instance_name,instance_name,instance_name,instance_name,instance_name,instance_name,cicd_user_id,instance_name,instance_name,instance_name,instance_name,instance_name,instance_name,job_status,job_status,job_name,job_normalized_full_name,cicd_user_id
+job_count,stacks,cicd_user_id,trend,job_status,qualified_job_name,project_name,instance_name,job_name,instance_name,instance_name,instance_name,instance_name,instance_name,cicd_user_id,instance_name,cicd_user_id,job_name,instance_name,project_name,instance_name,job_name,qualified_job_name,project_name,project_name,qualified_job_name
+job_count,exclude_filters,,yes,,,,yes,,,,,,,,,,,,,,yes,yes,yes,yes,yes
+dora_df,calculation_field,end_time,start_time,end_time,start_time,start_time,end_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,,
+dora_df,pipeline_filter_eq,projects,,,cicd_user_ids,,,,rollback,services,environments,step_name,,,,infrastructures,stage_name,step_name,,
+dora_df,pipeline_filter_contains,,cicd_user_ids,,,,,,,,,,,,,,,,,
+dora_df,pipeline_filter_not_eq,,,job_statuses,repositories,,,branches,,,,,stage_name,deployment_types,tags,,stage_status,step_status,,
+dora_df,pipeline_filter_starts_with,,,,,repositories,,,,,,,,,,,,,,
+dora_df,is_ci_job,,,,,,true,,,,,,,,,,,,,
+dora_df,is_cd_job,,,,,,true,,,,,,,,,,,,,
+dora_df,pipelines,all,all,all,all,all,specific,specific,specific,all,all,specific,specific,all,all,specific,all,specific
+dora_cfr,calculation_field,start_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,start_time,end_time,start_time
+dora_cfr,total_deployments_eq,projects,repositories||cicd_user_ids,repositories,projects||rollback,repositories,,,rollback,step_name,,,,infrastructures,stage_status,step_status,,environments
+dora_cfr,total_deployment_not_eq,,branches,cicd_user_ids,branches||cicd_user_ids,,branches,cicd_user_ids,,,stage_name,deployment_types,tags,,stage_name,step_name,services,
+dora_cfr,pipelines,all,all,all,all,specific,specific,specific,all,all,all,specific,specific,specific,all,all,all,specific

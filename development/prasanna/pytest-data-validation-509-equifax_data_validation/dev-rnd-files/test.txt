@@ -1,0 +1,86 @@
+
+
+select * from foo.jira_issues limit 10
+
+select * from (select key, assignee, row)
+
+
+select * from (SELECT
+	key,
+	assignee,
+	ROW_NUMBER () OVER (
+           PARTITION BY key
+		ORDER BY
+			ingested_at desc
+        )
+FROM
+	foo.jira_issues where integration_id='1430') x where assignee='Ajay Sakat' and row_number=1
+	
+
+select * from foo.jira_issues where key='LFE-2282' and integration_id='1430'
+
+
+
+select * from 
+
+
+where integration_id='1430' 
+
+
+select * from foo.jira_issues where key in ('LFE-1631', 'LFE-2282') and integration_id = '1430'
+
+
+
+
+select  count(key) from foo.jira_issues where integration_id='1430'
+
+SELECT key, COUNT(key)
+FROM foo.jira_issues
+GROUP BY key
+HAVING COUNT(key)>1
+
+
+
+select key from (SELECT
+	key,
+	assignee,
+	ROW_NUMBER () OVER (
+           PARTITION BY key
+		ORDER BY
+			ingested_at desc
+        )
+FROM
+	foo.jira_issues where integration_id='1430') x group by key having count(key)>1 
+	
+	
+	-- where assignee='Ajay Sakat' and row_number=1
+	--where assignee='Ajay Sakat'
+	
+	
+	where assignee='Ajay Sakat' and row_number=1
+	
+	
+
+
+-- final working queries 
+
+
+select * from (SELECT
+	key,
+	assignee,ingested_at,assignee_id,
+	ROW_NUMBER () OVER (
+           PARTITION BY key
+		ORDER BY
+			ingested_at desc
+        )
+FROM
+	foo.jira_issues where integration_id='1430') x where assignee='Viraj Ajgaonkar'  and row_number=1 and ingested_at=1648771200
+	
+	-- and assignee_id='35afaafe-d989-414d-86c9-c5a51fc986f4'
+
+	
+select distinct ingested_at from foo.jira_issues order by ingested_at desc limit 1
+
+
+
+
